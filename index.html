@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chinese History Timeline</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="display:flex;flex-direction:column;height:100vh;">
+
+  <header>
+    <h1>🏮 Chinese History Timeline</h1>
+    <div class="controls">
+      <button id="zoom-out" title="Zoom out">−</button>
+      <span id="zoom-level">100%</span>
+      <button id="zoom-in" title="Zoom in">+</button>
+      <button id="reset-view">Reset View</button>
+    </div>
+  </header>
+
+  <div class="legend" id="legend"></div>
+
+  <div class="hint">
+    <span>Drag to scroll</span>
+    <span>Scroll wheel to zoom</span>
+    <span>Click any dot to learn more</span>
+    <span>Dashed line = year 0 (BCE/CE)</span>
+  </div>
+
+  <div class="timeline-container" id="timeline-container">
+    <canvas id="timeline-canvas"></canvas>
+  </div>
+
+  <!-- Hover tooltip -->
+  <div id="tooltip"></div>
+
+  <!-- Click detail panel -->
+  <div class="event-detail" id="event-detail">
+    <button class="close-btn" id="close-detail" title="Close">✕</button>
+    <div id="event-content"></div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/timeline.js"></script>
+</body>
+</html>
