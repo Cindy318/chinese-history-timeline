@@ -446,13 +446,18 @@ class ChineseHistoryTimeline {
   // ── Detail panel ─────────────────────────────────────────────────────────────
 
   _showDetail(ev) {
-    const yr = ev.year < 0 ? `${Math.abs(ev.year)} BCE` : `${ev.year} CE`;
-    const cat = EVENT_CATEGORIES[ev.cat] || EVENT_CATEGORIES.political;
+    const yr    = ev.year < 0 ? `${Math.abs(ev.year)} BCE` : `${ev.year} CE`;
+    const yrZh  = ev.year < 0 ? `公元前${Math.abs(ev.year)}年` : `公元${ev.year}年`;
+    const cat   = EVENT_CATEGORIES[ev.cat] || EVENT_CATEGORIES.political;
+    const dyn   = DYNASTIES.find(d => d.name === ev.dynasty) || {};
+    const dynZh = dyn.zh || ev.dynasty;
     document.getElementById('event-content').innerHTML = `
-      <div class="ev-year">${yr}</div>
-      <h2>${ev.title}</h2>
-      <div class="ev-dynasty">${ev.dynasty}</div>
+      <div class="ev-year">${yrZh} &nbsp;·&nbsp; ${yr}</div>
+      <h2 class="ev-title-zh">${ev.titleZh || ev.title}</h2>
+      <h2 class="ev-title-en">${ev.title}</h2>
+      <div class="ev-dynasty"><span class="zh">${dynZh}</span> &nbsp;·&nbsp; ${ev.dynasty}</div>
       <span class="ev-cat" style="color:${cat.color};border-color:${cat.color};background:${cat.color}22">${cat.label}</span>
+      <p class="ev-desc zh">${ev.descZh || ''}</p>
       <p class="ev-desc">${ev.desc}</p>
     `;
     document.getElementById('event-detail').classList.add('visible');
