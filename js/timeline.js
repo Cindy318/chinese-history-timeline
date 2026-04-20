@@ -171,7 +171,7 @@ class ChineseHistoryTimeline {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     // Background
-    ctx.fillStyle = '#1d1e2c';
+    ctx.fillStyle = '#59656f';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     this._drawDynasties();
@@ -186,7 +186,7 @@ class ChineseHistoryTimeline {
 
     // Lane tint backgrounds
     for (let i = 0; i < this.NUM_LANES; i++) {
-      ctx.fillStyle = `rgba(172,159,187,${0.06 + i * 0.03})`;
+      ctx.fillStyle = `rgba(0,0,0,${0.08 + i * 0.04})`;
       ctx.fillRect(0, i * this.LANE_H, W, this.LANE_H);
     }
 
@@ -250,7 +250,7 @@ class ChineseHistoryTimeline {
     const Y = this.DYN_H;
     const H = this.RULER_H;
 
-    ctx.fillStyle = '#252636';
+    ctx.fillStyle = '#4a555e';
     ctx.fillRect(0, Y, W, H);
 
     // Separator line
