@@ -171,7 +171,7 @@ class ChineseHistoryTimeline {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     // Background
-    ctx.fillStyle = '#0d1117';
+    ctx.fillStyle = '#1d1e2c';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     this._drawDynasties();
@@ -186,7 +186,7 @@ class ChineseHistoryTimeline {
 
     // Lane tint backgrounds
     for (let i = 0; i < this.NUM_LANES; i++) {
-      ctx.fillStyle = `rgba(255,255,255,${0.02 + i * 0.01})`;
+      ctx.fillStyle = `rgba(172,159,187,${0.06 + i * 0.03})`;
       ctx.fillRect(0, i * this.LANE_H, W, this.LANE_H);
     }
 
@@ -218,7 +218,7 @@ class ChineseHistoryTimeline {
 
         const fontSize = Math.max(9, Math.min(13, w / 8));
         ctx.font = `600 ${fontSize}px 'Segoe UI', system-ui, sans-serif`;
-        ctx.fillStyle = 'rgba(255,255,255,0.92)';
+        ctx.fillStyle = 'rgba(247,235,236,0.92)';
         ctx.textBaseline = 'middle';
         ctx.textAlign = 'center';
 
@@ -236,7 +236,7 @@ class ChineseHistoryTimeline {
     // Lane labels on the very left
     const laneLabels = ['Main', 'North', 'Other'];
     for (let i = 0; i < this.NUM_LANES; i++) {
-      ctx.fillStyle = 'rgba(255,255,255,0.3)';
+      ctx.fillStyle = '#ac9fbb';
       ctx.font = '10px system-ui';
       ctx.textAlign = 'left';
       ctx.textBaseline = 'middle';
@@ -250,11 +250,11 @@ class ChineseHistoryTimeline {
     const Y = this.DYN_H;
     const H = this.RULER_H;
 
-    ctx.fillStyle = '#111827';
+    ctx.fillStyle = '#252636';
     ctx.fillRect(0, Y, W, H);
 
     // Separator line
-    ctx.strokeStyle = 'rgba(255,255,255,0.08)';
+    ctx.strokeStyle = 'rgba(172,159,187,0.2)';
     ctx.lineWidth = 1;
     ctx.beginPath();
     ctx.moveTo(0, Y); ctx.lineTo(W, Y);
@@ -278,7 +278,7 @@ class ChineseHistoryTimeline {
       const x = this.yearToX(yr);
       const isMaj = yr % major === 0;
 
-      ctx.strokeStyle = isMaj ? 'rgba(255,255,255,0.5)' : 'rgba(255,255,255,0.15)';
+      ctx.strokeStyle = isMaj ? 'rgba(247,235,236,0.55)' : 'rgba(172,159,187,0.2)';
       ctx.lineWidth   = isMaj ? 1.5 : 0.5;
       const tickH = isMaj ? H * 0.55 : H * 0.25;
       ctx.beginPath();
@@ -287,7 +287,7 @@ class ChineseHistoryTimeline {
       ctx.stroke();
 
       if (isMaj) {
-        ctx.fillStyle = 'rgba(255,255,255,0.65)';
+        ctx.fillStyle = 'rgba(247,235,236,0.75)';
         ctx.font = '10px monospace';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'bottom';
@@ -304,7 +304,7 @@ class ChineseHistoryTimeline {
     if (x < 0 || x > W) return;
 
     ctx.save();
-    ctx.strokeStyle = 'rgba(255, 220, 80, 0.45)';
+    ctx.strokeStyle = 'rgba(221,189,213,0.5)';
     ctx.lineWidth = 1.5;
     ctx.setLineDash([5, 5]);
     ctx.beginPath();
@@ -313,7 +313,7 @@ class ChineseHistoryTimeline {
     ctx.stroke();
     ctx.setLineDash([]);
 
-    ctx.fillStyle = 'rgba(255, 220, 80, 0.8)';
+    ctx.fillStyle = 'rgba(221,189,213,0.9)';
     ctx.font = 'bold 9px system-ui';
     ctx.textAlign = 'center';
     ctx.fillText('0', x, this.DYN_H + this.RULER_H - 2);
@@ -358,7 +358,7 @@ class ChineseHistoryTimeline {
       // Dot
       ctx.beginPath();
       ctx.arc(x, dotY, isHovered ? R + 2 : R, 0, Math.PI * 2);
-      ctx.fillStyle = isHovered ? '#fff' : catColor;
+      ctx.fillStyle = isHovered ? '#f7ebec' : catColor;
       ctx.fill();
       ctx.strokeStyle = catColor;
       ctx.lineWidth = 1.5;
@@ -369,7 +369,7 @@ class ChineseHistoryTimeline {
         ctx.save();
         const fontSize = isHovered ? 11 : 10;
         ctx.font = `${isHovered ? '600 ' : ''}${fontSize}px 'Segoe UI', system-ui`;
-        ctx.fillStyle = isHovered ? '#fff' : 'rgba(220,220,240,0.75)';
+        ctx.fillStyle = isHovered ? '#f7ebec' : 'rgba(247,235,236,0.65)';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'top';
 

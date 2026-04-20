@@ -1,12 +1,12 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg:       #0d1117;
-  --surface:  #161b22;
-  --border:   #30363d;
-  --text:     #c9d1d9;
-  --muted:    #8b949e;
-  --gold:     #e6c84a;
+  --bg:       #1d1e2c;   /* Shadow Grey */
+  --surface:  #252636;   /* between Shadow Grey and Blue Slate */
+  --border:   #59656f;   /* Blue Slate */
+  --text:     #f7ebec;   /* Lavender Blush */
+  --muted:    #ac9fbb;   /* Lilac Ash */
+  --gold:     #ddbdd5;   /* Thistle */
 }
 
 html, body {
@@ -45,7 +45,7 @@ header h1 {
 }
 
 .controls button {
-  background: #21262d;
+  background: #2e2f40;
   border: 1px solid var(--border);
   color: var(--text);
   height: 30px;
@@ -59,8 +59,8 @@ header h1 {
 }
 
 .controls button:hover {
-  background: #30363d;
-  border-color: #8b949e;
+  background: #59656f;
+  border-color: #ac9fbb;
 }
 
 #zoom-level {
@@ -78,7 +78,7 @@ header h1 {
   align-items: center;
   gap: 4px 12px;
   padding: 6px 18px;
-  background: #0d1117;
+  background: var(--bg);
   border-bottom: 1px solid var(--border);
   flex-shrink: 0;
 }
@@ -116,7 +116,7 @@ header h1 {
   align-items: center;
   gap: 16px;
   padding: 4px 18px;
-  background: rgba(255,255,255,0.02);
+  background: rgba(172,159,187,0.04);
   border-bottom: 1px solid var(--border);
   flex-shrink: 0;
   font-size: 0.72rem;
@@ -144,7 +144,7 @@ header h1 {
 /* ── Tooltip ── */
 #tooltip {
   position: fixed;
-  background: rgba(13, 17, 23, 0.95);
+  background: rgba(29, 30, 44, 0.97);
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 8px 12px;
@@ -196,7 +196,7 @@ header h1 {
   justify-content: center;
   transition: background 0.15s;
 }
-.close-btn:hover { background: #21262d; color: var(--text); }
+.close-btn:hover { background: #59656f; color: var(--text); }
 
 .ev-year {
   font-size: 0.78rem;
@@ -210,7 +210,7 @@ header h1 {
 .event-detail h2 {
   font-size: 1.15rem;
   font-weight: 700;
-  color: #fff;
+  color: #f7ebec;
   line-height: 1.3;
   margin-bottom: 6px;
 }
@@ -236,7 +236,7 @@ header h1 {
 .ev-desc {
   font-size: 0.88rem;
   line-height: 1.7;
-  color: #adbac7;
+  color: #c8bfd4;
 }
 
 /* ── Scrollbar styling (WebKit) ── */
