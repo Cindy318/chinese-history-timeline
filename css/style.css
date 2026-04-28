@@ -1,12 +1,12 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg:       #59656f;   /* Blue Slate */
-  --surface:  #4a555e;   /* darker Blue Slate for raised surfaces */
-  --border:   #7a8f9b;   /* lighter slate for borders */
-  --text:     #f7ebec;   /* Lavender Blush */
-  --muted:    #ddbdd5;   /* Thistle */
-  --gold:     #f7ebec;   /* Lavender Blush */
+  --bg:       #0d1117;
+  --surface:  #161b22;
+  --border:   #30363d;
+  --text:     #c9d1d9;
+  --muted:    #8b949e;
+  --gold:     #e6c84a;
 }
 
 html, body {
