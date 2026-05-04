@@ -1,12 +1,12 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg:       #0d1117;
-  --surface:  #161b22;
-  --border:   #30363d;
-  --text:     #c9d1d9;
-  --muted:    #8b949e;
-  --gold:     #e6c84a;
+  --bg:       #fdf6ec;
+  --surface:  #f0e8d8;
+  --border:   #c8b89a;
+  --text:     #2d2020;
+  --muted:    #6b5c48;
+  --gold:     #8b6914;
 }
 
 html, body {
@@ -45,7 +45,7 @@ header h1 {
 }
 
 .controls button {
-  background: #2e2f40;
+  background: #e8dcc8;
   border: 1px solid var(--border);
   color: var(--text);
   height: 30px;
@@ -59,8 +59,8 @@ header h1 {
 }
 
 .controls button:hover {
-  background: #59656f;
-  border-color: #ac9fbb;
+  background: #c8b89a;
+  border-color: #8b6914;
 }
 
 #zoom-level {
@@ -144,7 +144,7 @@ header h1 {
 /* ── Tooltip ── */
 #tooltip {
   position: fixed;
-  background: rgba(29, 30, 44, 0.97);
+  background: rgba(253, 246, 236, 0.97);
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 8px 12px;
@@ -196,7 +196,7 @@ header h1 {
   justify-content: center;
   transition: background 0.15s;
 }
-.close-btn:hover { background: #59656f; color: var(--text); }
+.close-btn:hover { background: #c8b89a; color: var(--text); }
 
 .ev-year {
   font-size: 0.78rem;
@@ -210,7 +210,7 @@ header h1 {
 .event-detail h2 {
   font-size: 1.15rem;
   font-weight: 700;
-  color: #f7ebec;
+  color: #2d2020;
   line-height: 1.3;
   margin-bottom: 4px;
 }
@@ -236,7 +236,7 @@ header h1 {
 .ev-title-zh {
   font-size: 1.35rem;
   font-weight: 700;
-  color: #f7ebec;
+  color: #2d2020;
   line-height: 1.3;
   margin-bottom: 2px;
   font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif;
@@ -257,13 +257,13 @@ header h1 {
 .ev-desc {
   font-size: 0.88rem;
   line-height: 1.7;
-  color: #c8bfd4;
+  color: #4a3828;
 }
 
 .ev-desc.zh {
   font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif;
   font-size: 0.9rem;
-  color: #f7ebec;
+  color: #2d2020;
   margin-bottom: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid rgba(255,255,255,0.1);
